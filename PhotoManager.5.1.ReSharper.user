@@ -1,0 +1,312 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:Telerik.Windows.Controls.RadGridView">
+      <Item value="Deleted" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Default">
+      <Item value="foreach" priority="6" />
+      <Item value="public" priority="9" />
+      <Item value="void" priority="6" />
+      <Item value="new" priority="9" />
+      <Item value="ObservableCollection&lt;ImageModel&gt;" priority="0" />
+      <Item value="FolderModel`0" priority="0" />
+      <Item value="this" priority="6" />
+      <Item value="Name" priority="0" />
+      <Item value="var" priority="17" />
+      <Item value="Images" priority="0" />
+      <Item value="id" priority="0" />
+      <Item value="Thread`0" priority="1" />
+      <Item value="delegate" priority="0" />
+      <Item value="Action`0" priority="0" />
+      <Item value="asrt" priority="0" />
+      <Item value="null" priority="1" />
+      <Item value="object" priority="1" />
+      <Item value="Dispatcher" priority="0" />
+      <Item value="if" priority="10" />
+      <Item value="private" priority="3" />
+      <Item value="else" priority="1" />
+      <Item value="ColumnDefinition`0" priority="0" />
+      <Item value="byte" priority="0" />
+      <Item value="d" priority="3" />
+      <Item value="short" priority="1" />
+      <Item value="sizeId" priority="0" />
+      <Item value="return" priority="3" />
+      <Item value="imageData" priority="2" />
+      <Item value="ImageSize`0" priority="2" />
+      <Item value="imageSize" priority="1" />
+      <Item value="photoModel" priority="0" />
+      <Item value="file" priority="2" />
+      <Item value="Folder" priority="0" />
+      <Item value="static" priority="3" />
+      <Item value="_imageSize" priority="3" />
+      <Item value="IServiceProvider`0" priority="0" />
+      <Item value="s" priority="1" />
+      <Item value="StaticClass`0" priority="1" />
+      <Item value="SettingsGroupDescriptionAttribute`0" priority="0" />
+      <Item value="Settings`0" priority="0" />
+      <Item value="ImageSize" priority="0" />
+      <Item value="_photoEntities" priority="1" />
+      <Item value="Stream`0" priority="0" />
+      <Item value="MemoryStream`0" priority="1" />
+      <Item value="ImageData" priority="0" />
+      <Item value="folderId" priority="0" />
+      <Item value="Array`0" priority="0" />
+      <Item value="typeof" priority="1" />
+      <Item value="Image`0" priority="0" />
+      <Item value="IEnumerable`0" priority="0" />
+      <Item value="long" priority="0" />
+      <Item value="Uniform" priority="0" />
+      <Item value="i" priority="0" />
+      <Item value="continue" priority="0" />
+      <Item value="scrollViewer" priority="0" />
+      <Item value="PhotoModel" priority="1" />
+      <Item value="bitmapImage" priority="0" />
+      <Item value="RadGridView" priority="0" />
+      <Item value="MessageBox" priority="0" />
+      <Item value="OKCancel" priority="0" />
+      <Item value="OK" priority="0" />
+      <Item value="int" priority="0" />
+      <Item value="totalSize" priority="1" />
+      <Item value="Length" priority="0" />
+      <Item value="Resources" priority="0" />
+      <Item value="CultureInfoIetfLanguageTagConverter`0" priority="0" />
+      <Item value="Deleted" priority="0" />
+      <Item value="Application`0" priority="0" />
+      <Item value="Windows" priority="1" />
+      <Item value="System" priority="0" />
+      <Item value="Forms" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotoManager.PhotoEntities">
+      <Item value="Folder" priority="0" />
+      <Item value="ImageData" priority="4" />
+      <Item value="ImageSize" priority="2" />
+      <Item value="SaveChanges`0" priority="3" />
+      <Item value="ObjectStateManager" priority="0" />
+      <Item value="Connection" priority="0" />
+      <Item value="ContextOptions" priority="0" />
+      <Item value="TestConnection`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="DeleteObject`0" priority="1" />
+      <Item value="FirstOrDefault`1" priority="1" />
+      <Item value="First`1" priority="0" />
+      <Item value="AddObject`0" priority="1" />
+      <Item value="Where`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotoManager.Models.FolderModel">
+      <Item value="Folder" priority="5" />
+      <Item value="Images" priority="0" />
+      <Item value="ScanFolder`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.ObservableCollection`1">
+      <Item value="Add`0" priority="0" />
+      <Item value="Any`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Threading.Dispatcher">
+      <Item value="CurrentDispatcher" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotoManager.Models.ImageModel">
+      <Item value="OnPropertyChanged`0" priority="0" />
+      <Item value="Path" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Threading.DispatcherPriority">
+      <Item value="Background" priority="3" />
+      <Item value="Loaded" priority="0" />
+      <Item value="Render" priority="0" />
+      <Item value="SystemIdle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="0" />
+      <Item value="Abort`0" priority="0" />
+      <Item value="Interrupt`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Threading.Dispatcher">
+      <Item value="BeginInvoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Threading.DispatcherOperation">
+      <Item value="Abort`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PhotoManager.Static.StaticClass">
+      <Item value="Release`0" priority="1" />
+      <Item value="Wait`0" priority="0" />
+      <Item value="GetVisualChild`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotoManager.Folder">
+      <Item value="FolderId" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotoManager.Models.PhotoModel">
+      <Item value="_photoEntities" priority="0" />
+      <Item value="GetImage`0" priority="0" />
+      <Item value="SaveChanges`0" priority="1" />
+      <Item value="ItemsSource" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotoManager.ImageData">
+      <Item value="FolderId" priority="1" />
+      <Item value="SizeId" priority="2" />
+      <Item value="Data" priority="5" />
+      <Item value="FileName" priority="1" />
+      <Item value="Size" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotoManager.ImageSize">
+      <Item value="SizeId" priority="1" />
+      <Item value="Width" priority="1" />
+      <Item value="Height" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PhotoManager.Settings">
+      <Item value="ImgWidth" priority="1" />
+      <Item value="ImgHeight" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Media.Imaging.BitmapImage">
+      <Item value="StreamSource" priority="2" />
+      <Item value="CopyPixels`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Array">
+      <Item value="CreateInstance`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Array">
+      <Item value="Cast`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="ToArray`1" priority="0" />
+      <Item value="OrderByDescending`2" priority="0" />
+      <Item value="Reverse`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToString`0" priority="0" />
+      <Item value="ToList`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="FirstOrDefault`1" priority="0" />
+      <Item value="Remove`0" priority="0" />
+      <Item value="ForEach`0" priority="0" />
+      <Item value="Count" priority="0" />
+      <Item value="LastIndexOf`0" priority="0" />
+      <Item value="IndexOf`0" priority="0" />
+      <Item value="Insert`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="ToLower`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="GetFileName`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt32`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PhotoManager.Helpers.ControlItemDoubleClick">
+      <Item value="SetItemsDoubleClick`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ScrollViewer">
+      <Item value="ContentVerticalOffset" priority="0" />
+      <Item value="ScrollToVerticalOffset`0" priority="0" />
+      <Item value="VerticalOffset" priority="0" />
+      <Item value="ScrollChanged" priority="0" />
+      <Item value="SizeChanged" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Data.IValueConverter">
+      <Item value="Convert`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectStateManager">
+      <Item value="ChangeObjectState`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Common.DbConnection">
+      <Item value="CreateCommand`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Common.DbCommand">
+      <Item value="CommandText" priority="0" />
+      <Item value="ExecuteNonQuery`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.EntityState">
+      <Item value="Detached" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Exit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.SaveFileDialog">
+      <Item value="FileName" priority="0" />
+      <Item value="AddExtension" priority="0" />
+      <Item value="InitialDirectory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToShortDateString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Format`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:App.Config" caret="0" fromTop="0" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:ImageModel.cs" caret="0" fromTop="0" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Providers/f:CustomKeyboardCommandProvider.cs" caret="347" fromTop="9" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:App.xaml.cs" caret="565" fromTop="14" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Static/f:StaticClass.cs" caret="0" fromTop="0" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml" caret="590" fromTop="7" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Converters/f:FileSizeConverter.cs" caret="433" fromTop="13" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:Model.Designer.cs" caret="1585" fromTop="20" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Helpers/f:ControlSaveHelper.cs" caret="286" fromTop="12" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="327" fromTop="12" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml.cs" caret="3498" fromTop="13" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="1022" fromTop="0" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:FolderModel.cs" caret="2966" fromTop="15" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:Settings.cs" caret="344" fromTop="8" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml" caret="9741" fromTop="28" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="1461" fromTop="21" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml" caret="9224" fromTop="15" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:Settings.cs" caret="677" fromTop="12" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml" caret="3687" fromTop="35" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml" caret="3333" fromTop="29" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml" caret="590" fromTop="7" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml.cs" caret="10313" fromTop="37" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml.cs" caret="10204" fromTop="38" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="6826" fromTop="22" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="6997" fromTop="32" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="6997" fromTop="27" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="7515" fromTop="44" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="7498" fromTop="43" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="5219" fromTop="26" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="6997" fromTop="15" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:FolderModel.cs" caret="6988" fromTop="26" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:FolderModel.cs" caret="6259" fromTop="16" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="9899" fromTop="41" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="9049" fromTop="5" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="2368" fromTop="24" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="3292" fromTop="19" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="1136" fromTop="22" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="4810" fromTop="3" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="5217" fromTop="10" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="8849" fromTop="21" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoContext.cs" caret="327" fromTop="12" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/d:Models/f:PhotoModel.cs" caret="1022" fromTop="20" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:MainWindow.xaml.cs" caret="3461" fromTop="12" />
+      <File id="83CF927F-83AF-495F-8D7B-DC0300787BDD/f:Settings.cs" caret="344" fromTop="8" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

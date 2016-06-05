@@ -1,0 +1,4 @@
+BACKUP DATABASE Photo 
+TO DISK = '{0}' WITH NOFORMAT, INIT,  
+NAME = N'AdventureWorks-Full Database Backup', 
+SKIP, NOREWIND, NOUNLOAD,  STATS = 10

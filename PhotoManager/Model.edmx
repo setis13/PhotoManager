@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PhotoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="PhotoModelStoreContainer">
+          <EntitySet Name="Attribute" EntityType="PhotoModel.Store.Attribute" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Folder" EntityType="PhotoModel.Store.Folder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FolderAttribute" EntityType="PhotoModel.Store.FolderAttribute" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ImageData" EntityType="PhotoModel.Store.ImageData" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ImageSize" EntityType="PhotoModel.Store.ImageSize" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_FolderAttribute_Attribute" Association="PhotoModel.Store.FK_FolderAttribute_Attribute">
+            <End Role="Attribute" EntitySet="Attribute" />
+            <End Role="FolderAttribute" EntitySet="FolderAttribute" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FolderAttribute_Folder" Association="PhotoModel.Store.FK_FolderAttribute_Folder">
+            <End Role="Folder" EntitySet="Folder" />
+            <End Role="FolderAttribute" EntitySet="FolderAttribute" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImageData_Folder" Association="PhotoModel.Store.FK_ImageData_Folder">
+            <End Role="Folder" EntitySet="Folder" />
+            <End Role="ImageData" EntitySet="ImageData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImageData_ImageSize" Association="PhotoModel.Store.FK_ImageData_ImageSize">
+            <End Role="ImageSize" EntitySet="ImageSize" />
+            <End Role="ImageData" EntitySet="ImageData" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Attribute">
+          <Key>
+            <PropertyRef Name="AttrId" />
+          </Key>
+          <Property Name="AttrId" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Folder">
+          <Key>
+            <PropertyRef Name="FolderId" />
+          </Key>
+          <Property Name="FolderId" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="TitleFile" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="FolderAttribute">
+          <Key>
+            <PropertyRef Name="FolderId" />
+            <PropertyRef Name="AttrId" />
+          </Key>
+          <Property Name="FolderId" Type="smallint" Nullable="false" />
+          <Property Name="AttrId" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImageData">
+          <Key>
+            <PropertyRef Name="FileId" />
+          </Key>
+          <Property Name="FileId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FolderId" Type="smallint" Nullable="false" />
+          <Property Name="SizeId" Type="tinyint" Nullable="false" />
+          <Property Name="FileName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Data" Type="image" Nullable="false" />
+          <Property Name="Size" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImageSize">
+          <Key>
+            <PropertyRef Name="SizeId" />
+          </Key>
+          <Property Name="SizeId" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Height" Type="smallint" Nullable="false" />
+          <Property Name="Width" Type="smallint" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_FolderAttribute_Attribute">
+          <End Role="Attribute" Type="PhotoModel.Store.Attribute" Multiplicity="1" />
+          <End Role="FolderAttribute" Type="PhotoModel.Store.FolderAttribute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Attribute">
+              <PropertyRef Name="AttrId" />
+            </Principal>
+            <Dependent Role="FolderAttribute">
+              <PropertyRef Name="AttrId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FolderAttribute_Folder">
+          <End Role="Folder" Type="PhotoModel.Store.Folder" Multiplicity="1" />
+          <End Role="FolderAttribute" Type="PhotoModel.Store.FolderAttribute" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Folder">
+              <PropertyRef Name="FolderId" />
+            </Principal>
+            <Dependent Role="FolderAttribute">
+              <PropertyRef Name="FolderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImageData_Folder">
+          <End Role="Folder" Type="PhotoModel.Store.Folder" Multiplicity="1" />
+          <End Role="ImageData" Type="PhotoModel.Store.ImageData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Folder">
+              <PropertyRef Name="FolderId" />
+            </Principal>
+            <Dependent Role="ImageData">
+              <PropertyRef Name="FolderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImageData_ImageSize">
+          <End Role="ImageSize" Type="PhotoModel.Store.ImageSize" Multiplicity="1" />
+          <End Role="ImageData" Type="PhotoModel.Store.ImageData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageSize">
+              <PropertyRef Name="SizeId" />
+            </Principal>
+            <Dependent Role="ImageData">
+              <PropertyRef Name="SizeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PhotoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="PhotoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Attribute" EntityType="PhotoModel.Attribute" />
+          <EntitySet Name="Folder" EntityType="PhotoModel.Folder" />
+          <AssociationSet Name="FolderAttribute" Association="PhotoModel.FolderAttribute">
+            <End Role="Attribute" EntitySet="Attribute" />
+            <End Role="Folder" EntitySet="Folder" />
+          </AssociationSet>
+          <EntitySet Name="ImageSize" EntityType="PhotoModel.ImageSize" />
+          <EntitySet Name="ImageData" EntityType="PhotoModel.ImageData" />
+          <AssociationSet Name="FK_ImageData_Folder" Association="PhotoModel.FK_ImageData_Folder">
+            <End Role="Folder" EntitySet="Folder" />
+            <End Role="ImageData" EntitySet="ImageData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImageData_ImageSize" Association="PhotoModel.FK_ImageData_ImageSize">
+            <End Role="ImageSize" EntitySet="ImageSize" />
+            <End Role="ImageData" EntitySet="ImageData" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Attribute">
+          <Key>
+            <PropertyRef Name="AttrId" />
+          </Key>
+          <Property Name="AttrId" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Folder" Relationship="PhotoModel.FolderAttribute" FromRole="Attribute" ToRole="Folder" />
+        </EntityType>
+        <EntityType Name="Folder">
+          <Key>
+            <PropertyRef Name="FolderId" />
+          </Key>
+          <Property Name="FolderId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="TitleFile" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Attribute" Relationship="PhotoModel.FolderAttribute" FromRole="Folder" ToRole="Attribute" />
+          <NavigationProperty Name="ImageData" Relationship="PhotoModel.FK_ImageData_Folder" FromRole="Folder" ToRole="ImageData" />
+        </EntityType>
+        <Association Name="FolderAttribute">
+          <End Role="Attribute" Type="PhotoModel.Attribute" Multiplicity="*" />
+          <End Role="Folder" Type="PhotoModel.Folder" Multiplicity="*" />
+        </Association>
+        <EntityType Name="ImageSize">
+          <Key>
+            <PropertyRef Name="SizeId" />
+          </Key>
+          <Property Type="Byte" Name="SizeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int16" Name="Height" Nullable="false" />
+          <Property Type="Int16" Name="Width" Nullable="false" />
+          <NavigationProperty Name="ImageData" Relationship="PhotoModel.FK_ImageData_ImageSize" FromRole="ImageSize" ToRole="ImageData" />
+        </EntityType>
+        <EntityType Name="ImageData">
+          <Key>
+            <PropertyRef Name="FileId" />
+          </Key>
+          <Property Type="Int32" Name="FileId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int16" Name="FolderId" Nullable="false" />
+          <Property Type="Byte" Name="SizeId" Nullable="false" />
+          <Property Type="String" Name="FileName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="Data" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Folder" Relationship="PhotoModel.FK_ImageData_Folder" FromRole="ImageData" ToRole="Folder" />
+          <NavigationProperty Name="ImageSize" Relationship="PhotoModel.FK_ImageData_ImageSize" FromRole="ImageData" ToRole="ImageSize" />
+          <Property Type="Int64" Name="Size" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ImageData_Folder">
+          <End Type="PhotoModel.Folder" Role="Folder" Multiplicity="1" />
+          <End Type="PhotoModel.ImageData" Role="ImageData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Folder">
+              <PropertyRef Name="FolderId" />
+            </Principal>
+            <Dependent Role="ImageData">
+              <PropertyRef Name="FolderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImageData_ImageSize">
+          <End Type="PhotoModel.ImageSize" Role="ImageSize" Multiplicity="1" />
+          <End Type="PhotoModel.ImageData" Role="ImageData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ImageSize">
+              <PropertyRef Name="SizeId" />
+            </Principal>
+            <Dependent Role="ImageData">
+              <PropertyRef Name="SizeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PhotoModelStoreContainer" CdmEntityContainer="PhotoEntities">
+          <EntitySetMapping Name="Attribute"><EntityTypeMapping TypeName="PhotoModel.Attribute"><MappingFragment StoreEntitySet="Attribute">
+            <ScalarProperty Name="AttrId" ColumnName="AttrId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Folder"><EntityTypeMapping TypeName="PhotoModel.Folder"><MappingFragment StoreEntitySet="Folder">
+            <ScalarProperty Name="FolderId" ColumnName="FolderId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="TitleFile" ColumnName="TitleFile" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FolderAttribute" TypeName="PhotoModel.FolderAttribute" StoreEntitySet="FolderAttribute">
+            <EndProperty Name="Attribute">
+              <ScalarProperty Name="AttrId" ColumnName="AttrId" />
+            </EndProperty>
+            <EndProperty Name="Folder">
+              <ScalarProperty Name="FolderId" ColumnName="FolderId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="ImageSize">
+            <EntityTypeMapping TypeName="PhotoModel.ImageSize">
+              <MappingFragment StoreEntitySet="ImageSize">
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="SizeId" ColumnName="SizeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImageData">
+            <EntityTypeMapping TypeName="PhotoModel.ImageData">
+              <MappingFragment StoreEntitySet="ImageData">
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="SizeId" ColumnName="SizeId" />
+                <ScalarProperty Name="FolderId" ColumnName="FolderId" />
+                <ScalarProperty Name="FileId" ColumnName="FileId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="PhotoModel.Attribute" Width="1.5" PointX="0.75" PointY="1" Height="1.5956835937499998" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoModel.Folder" Width="1.5" PointX="3" PointY="0.875" Height="1.7879850260416674" IsExpanded="true" />
+        <AssociationConnector Association="PhotoModel.FolderAttribute" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.7978417968749998" />
+          <ConnectorPoint PointX="3" PointY="1.7978417968749998" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="PhotoModel.ImageSize" Width="1.5" PointX="0.75" PointY="3.25" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="PhotoModel.ImageData" Width="1.5" PointX="2.875" PointY="3.375" Height="2.3648893229166656" />
+        <AssociationConnector Association="PhotoModel.FK_ImageData_Folder" >
+          <ConnectorPoint PointX="3.6875" PointY="2.8552864583333331" />
+          <ConnectorPoint PointX="3.6875" PointY="3.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="PhotoModel.FK_ImageData_ImageSize" >
+          <ConnectorPoint PointX="2.25" PointY="4.2064925130208337" />
+          <ConnectorPoint PointX="2.875" PointY="4.2064925130208337" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
